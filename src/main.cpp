@@ -56,7 +56,7 @@ int main(int argc, char* argv[]) {
     */
     switch (selectedProgram) {
     case 1:
-        printf("Launching program %d...\n", selectedProgram);
+        printf("\nLaunching program %d...\n\n", selectedProgram);
         programOneEntry();
         break;
     default:
