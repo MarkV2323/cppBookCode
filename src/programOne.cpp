@@ -22,6 +22,25 @@ void gatherUserInput() {
 
 /* Example: print out primitive type information */
 void printPrimTypeInfo() {
+    cout << "=======================================================" << endl;
+    cout << "POSSIBLE PRIMITIVES AND CORRESPONDING SIZE INFORMATION" << endl;
+    cout << "Results may vary upon compiler, hardware and OS" << endl;
+    cout << "1 BYTE = 8 BITs ie char = 1 BYTE = 8 BITs " << endl;
+    cout << "=======================================================" << endl;
+    cout << "Size of bool               : " << sizeof(bool) << " BYTES" << endl;
+    cout << "Size of char               : " << sizeof(char) << " BYTES" << endl;
+    cout << "Size of short              : " << sizeof(short) << " BYTES" << endl;
+    cout << "Size of int                : " << sizeof(int) << " BYTES" << endl;
+    cout << "Size of long               : " << sizeof(long) << " BYTES" << endl;
+    cout << "Size of float              : " << sizeof(float) << " BYTES" << endl;
+    cout << "Size of double             : " << sizeof(double) << " BYTES" << endl;
+    cout << "Size of unsigned short     : " << sizeof(unsigned short) << " BYTES" << endl;
+    cout << "Size of unsigned int       : " << sizeof(unsigned int) << " BYTES" << endl;
+    cout << "Size of long long          : " << sizeof(long long) << " BYTES" << endl;
+    cout << "Size of unsigned long      : " << sizeof(unsigned long) << " BYTES" << endl;
+    cout << "Size of unsigned long long : " << sizeof(unsigned long long) << " BYTES" << endl;
+    cout << "=======================================================" << endl;
+
     return;
 }
 
@@ -34,5 +53,8 @@ string cStringExample() {
 void programOneEntry() {
     // call user input example function
     gatherUserInput();
+    cout << endl;
+    printPrimTypeInfo();
+    cout << endl;
     return;
 }
