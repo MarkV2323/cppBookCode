@@ -1,4 +1,5 @@
 #include "header/programOne.hpp"
+#include <string.h>
 
 /* Example: get input from the user */
 void gatherUserInput() {
@@ -46,6 +47,22 @@ void printPrimTypeInfo() {
 
 /* Example: showcase differences between C-Strings (char array) & strings */
 string cStringExample() {
+    /* c string are null terminated*/
+    char src[] = "This is an example.";
+    
+    // a simple way to iterate through a c-str, stops on null character reguardless of length
+    printf("SizeOf src: %i\n", int(sizeof(src)));
+    printf("Length of \n%s\n is %i.\n", src, int(strlen(src)));
+    for (int i = 0; src[i]; i++)
+        printf("%c", src[i]);
+    printf("\n");
+    cout << "The null char at the end of the cstr: " << src[20] << endl;
+    cout << "You can also iter through a cstr like \n";
+    // quick way to do it also
+    char* c = src;
+    while(*c)
+        printf("%c", *c++);
+    cout << endl;
     return "";
 }
 
@@ -55,6 +72,8 @@ void programOneEntry() {
     gatherUserInput();
     cout << endl;
     printPrimTypeInfo();
+    cout << endl;
+    cStringExample();
     cout << endl;
     return;
 }
